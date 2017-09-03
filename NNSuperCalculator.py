@@ -1,0 +1,2 @@
+import sys, re
+list(map(lambda line: print(re.sub(r"\.0", "", re.sub(r"[\[\],]", "", str(list(map(lambda x: eval(line.split()[0].replace("^", "**")), list(map(float, line.split()[1:])))))))), sys.stdin))
